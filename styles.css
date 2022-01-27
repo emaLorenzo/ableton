@@ -1,0 +1,192 @@
+@font-face {
+  font-family: futura-pt;
+  src:
+    url("assets/fonts/FuturaPT-Medium.woff2") format("woff2"),
+    url("assets/fonts/FuturaPT-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: futura-pt;
+  src:
+    url("assets/fonts/FuturaPT-Medium.woff2") format("woff2"),
+    url("assets/fonts/FuturaPT-Medium.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --gray: #f3f3f3;
+  --border: #eee;
+  --orange: #ff764d;
+}
+
+html {
+  background: var(--gray);
+}
+
+body {
+  font-family: futura-pt, Avenir, -apple-system, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+header > div {
+  height: 4.25rem;
+}
+
+header div + div {
+  border-top: 2px solid var(--border);
+  transform: translateY(1px);
+}
+
+header nav ul li {
+  padding: 0.5rem 1.25rem;
+  cursor: pointer;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.875rem;
+  line-height: 1.4;
+}
+
+.header-secondary li a {
+  font-size: 1rem;
+}
+
+.header-secondary {
+  padding: 0 1.2rem;
+}
+
+.header-primary {
+  display: flex;
+  padding-right: 1.2rem;
+
+  & > a:first-child {
+    margin-left: 2.5rem;
+    margin-right: 1.2rem;
+  }
+
+  & svg {
+    width: 3.75em;
+    height: 1.75em;
+    max-width: unset;
+  }
+
+  & ul {
+    display: flex;
+  }
+}
+
+.nav-more {
+  color: var(--orange);
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: "";
+    width: 12px;
+    height: 2px;
+    position: absolute;
+    right: 0;
+    background: currentColor;
+    transform: translateY(1px);
+  }
+
+  &::before {
+    content: "";
+    width: 12px;
+    height: 2px;
+    position: absolute;
+    right: 0;
+    background: currentColor;
+    transform: translateY(1px) rotate(90deg);
+  }
+}
+
+.nav-try {
+  color: blue;
+}
+
+.nav-account {
+  font-size: 1rem;
+  padding-left: 0.6rem;
+  transform: translateY(1px);
+}
+
+.nav-selected {
+  color: var(--orange);
+}
+
+/* hero */
+
+.hero-img {
+  width: 100%;
+  height: calc(100vh - 136px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* aspect-ratio: 16 / 9; */
+
+  & > img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    object-fit: cover;
+  }
+
+  & > svg {
+    position: absolute;
+  }
+
+  @media screen and (min-width: 100em) {
+    max-width: calc(100% - (133.3333px * 2));
+    margin: 0 auto 133.3333px;
+  }
+}
+
+.body-text {
+  max-width: 800px;
+  margin: auto;
+}
+
+/* utility */
+
+.font-futura {
+  font-family: futura-pt, Avenir, -apple-system, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.full-w {
+  width: 100%;
+}
+
+.full-h {
+  height: 100%;
+}
+
+.center-v {
+  display: flex;
+  align-items: center;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 100rem;
+  height: 100vh;
+  margin: auto;
+  background-color: white;
+}
